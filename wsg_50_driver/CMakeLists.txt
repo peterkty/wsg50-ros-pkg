@@ -45,7 +45,7 @@ set(DRIVER_SOURCES_CAN
 include_directories(include)
 add_definitions(-DOSNAME_LINUX)
 add_definitions(-g)
-set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++0x") # Need C++11 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x") # Need C++11 
 
 add_executable(wsg_50_ip src/main.cpp ${DRIVER_SOURCES})
 target_link_libraries(wsg_50_ip ${catkin_LIBRARIES})
