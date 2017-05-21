@@ -48,6 +48,7 @@ add_definitions(-g)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x") # Need C++11 
 
 add_executable(wsg_50_ip src/main.cpp ${DRIVER_SOURCES})
+add_dependencies(wsg_50_ip ${catkin_EXPORTED_TARGETS})
 target_link_libraries(wsg_50_ip ${catkin_LIBRARIES})
 
 #add_executable(wsg_50_can src/main_can.cpp src/checksum.cpp src/msg.c src/common.cpp src/functions_can.cpp)
